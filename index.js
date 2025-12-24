@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TSF | Christmas Ops</title>
+  <title>Alpha Contingency Force 👑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ❄️ SNOW -->
+<canvas id="snow"></canvas>
+
 <header>
   <h1 class="logo">TSF</h1>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="circle">COMING<br>SOON</div>
   <h2>POSITION FILLING</h2>
@@ -19,39 +23,57 @@
   <p class="small">Applications being reviewed</p>
 </section>
 
+<!-- STATUS CARD -->
 <section class="card">
   <h2>POSITION FILLING</h2>
   <p class="open">RECRUITMENT OPEN</p>
   <p>Applications being reviewed</p>
 </section>
 
+<!-- GALLERY -->
 <section class="gallery">
   <h2>📸 GALLERY</h2>
-  <div class="image-box">
-    <img src="https://via.placeholder.com/400x220" alt="">
+
+  <div class="slider">
+    <img src="images/img1.jpg" class="slide active">
+    <img src="images/img2.jpg" class="slide">
+    <img src="images/img3.jpg" class="slide">
+
+    <button class="nav left">❮</button>
+    <button class="nav right">❯</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about">
   <h1>SECURITY FORCE</h1>
   <p>PROTECTION • UNITY • EXCELLENCE</p>
 
-  <button class="main-btn">🎄 Join Thunder Security Force</button>
+  <button class="main-btn">🎄 Join Alpha Contingency Force 👑</button>
   <span class="est">EST. 2025</span>
 </section>
 
+<!-- DISCORD -->
 <section class="discord">
   <h2>JOIN OUR DISCORD</h2>
   <p>
-    Connect with TSF members, receive real-time updates,
+    Connect with ACF members, receive real-time updates,
     and be part of our security network.
   </p>
   <a href="#" class="main-btn">Join Discord</a>
 </section>
 
 <footer>
-  <p>© 2025 TSF | Christmas Edition ❄️</p>
+  <p>© 2025 ACF | Christmas Edition ❄️</p>
 </footer>
 
+<audio id="bell" src="sounds/bell.mp3"></audio>
+<script src="script.js"></script>
 </body>
 </html>
