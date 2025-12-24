@@ -258,7 +258,71 @@ footer {
   font-size: 13px;
   color: #4cff9f;
 }
+/* 🔐 ADMIN PANEL */
+.admin {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f1235;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 20px #6a5cff;
+  z-index: 9999;
+  width: 260px;
+}
 
+.admin h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.admin input, .admin textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.admin button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#6a5cff,#4cc9f0);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MEMBERS */
+.members {
+  padding: 60px 20px;
+}
+
+.members ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.members li {
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 10px rgba(106,92,255,0.3);
+}
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
