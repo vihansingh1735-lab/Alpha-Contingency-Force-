@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
+  min-height: 100vh;
   background: linear-gradient(180deg, #07091f, #120b2e);
   color: white;
   text-align: center;
@@ -39,8 +40,8 @@ body {
 }
 
 .loader-ring {
-  width: 120px;
-  height: 120px;
+  width: clamp(90px, 18vw, 120px);
+  height: clamp(90px, 18vw, 120px);
   border-radius: 50%;
   border: 6px solid rgba(106,92,255,0.25);
   border-top: 6px solid #4cc9f0;
@@ -54,50 +55,52 @@ body {
 
 .loader-text {
   margin-top: 20px;
-  font-size: 42px;
+  font-size: clamp(26px, 5vw, 42px);
   color: #4cc9f0;
 }
 
 .loader-sub {
   opacity: 0.8;
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .loader-christmas {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: clamp(11px, 2vw, 13px);
   color: #4cff9f;
 }
 
 /* Header */
 header {
-  padding: 20px;
+  padding: clamp(15px, 3vw, 30px);
   position: relative;
   z-index: 2;
 }
 
 .logo {
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   color: #4cc9f0;
   text-shadow: 0 0 20px #6a5cff;
 }
 
-/* Hero */
+/* Hero Wrapper */
 .hero {
-  padding: 60px 20px;
+  padding: clamp(40px, 8vw, 90px) 20px;
   position: relative;
   z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* 🔵 Logo Circle (IMAGE LINK USED HERE) */
+/* 🔵 Logo Circle */
 .acf-circle {
-  width: 200px;
-  height: 200px;
+  width: clamp(150px, 22vw, 220px);
+  height: clamp(150px, 22vw, 220px);
   margin: 30px auto;
   border-radius: 50%;
-  background-image: url("https://cdn.discordapp.com/attachments/1451114152008351879/1453647900096856199/lv_0_20251224215615.jpg?ex=694e369a&is=694ce51a&hm=af2ff1aa4633cb4df30363511bcebc66310532b90f6bc272d1caf500b2f073d9&");
+  background-image: url("https://cdn.discordapp.com/attachments/1451114152008351879/1453647900096856199/lv_0_20251224215615.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   box-shadow: 0 0 60px rgba(106,92,255,0.9);
   animation: pulseGlow 3s infinite ease-in-out;
 }
@@ -110,6 +113,7 @@ header {
 
 .hero h2 {
   margin-top: 25px;
+  font-size: clamp(20px, 4vw, 30px);
   color: #4cc9f0;
 }
 
@@ -120,61 +124,68 @@ header {
 
 .small {
   opacity: 0.8;
+  font-size: clamp(13px, 2.5vw, 15px);
 }
 
 /* Card */
 .card {
   margin: 40px auto;
-  width: 90%;
-  max-width: 420px;
-  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  padding: clamp(20px, 4vw, 32px);
   border-radius: 20px;
   background: linear-gradient(145deg, #1b1f4a, #0f1235);
   box-shadow: 0 0 30px rgba(106,92,255,0.5);
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
 /* About */
 .about {
-  padding: 70px 20px;
+  padding: clamp(60px, 10vw, 100px) 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about h1 {
+  font-size: clamp(24px, 4.5vw, 36px);
   color: #6a5cff;
 }
 
 .desc {
   margin-top: 15px;
   opacity: 0.9;
+  font-size: clamp(14px, 2.6vw, 17px);
 }
 
 /* Button */
 .main-btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 16px 34px;
+  padding: clamp(14px, 3vw, 18px) clamp(28px, 6vw, 44px);
   border-radius: 40px;
   background: linear-gradient(90deg, #6a5cff, #4cc9f0);
   color: white;
   text-decoration: none;
+  font-size: clamp(14px, 2.5vw, 18px);
   box-shadow: 0 0 30px #6a5cff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 45px rgba(120,150,255,0.9);
 }
 
 .est {
   display: block;
   margin-top: 15px;
   opacity: 0.7;
+  font-size: clamp(12px, 2vw, 14px);
 }
 
 /* Footer */
 footer {
   padding: 20px;
   opacity: 0.6;
-}
-
-/* 📱 Mobile */
-@media (max-width: 600px) {
-  .acf-circle {
-    width: 170px;
-    height: 170px;
-  }
+  font-size: clamp(12px, 2vw, 14px);
 }
