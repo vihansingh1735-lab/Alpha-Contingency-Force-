@@ -83,7 +83,7 @@ header {
   text-shadow: 0 0 20px #6a5cff;
 }
 
-/* Hero Wrapper */
+/* Hero */
 .hero {
   padding: clamp(40px, 8vw, 90px) 20px;
   position: relative;
@@ -92,17 +92,17 @@ header {
   margin: 0 auto;
 }
 
-/* 🔵 Logo Circle */
+/* 🔵 ACF LOGO (FIXED) */
 .acf-circle {
   width: clamp(150px, 22vw, 220px);
   height: clamp(150px, 22vw, 220px);
   margin: 30px auto;
   border-radius: 50%;
-  background-image: url("https://cdn.discordapp.com/attachments/1451114152008351879/1453647900096856199/lv_0_20251224215615.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("./assets/logo.jpg") center / cover no-repeat;
   box-shadow: 0 0 60px rgba(106,92,255,0.9);
   animation: pulseGlow 3s infinite ease-in-out;
+  position: relative;
+  z-index: 3;
 }
 
 @keyframes pulseGlow {
