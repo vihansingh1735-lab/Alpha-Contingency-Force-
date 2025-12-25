@@ -99,7 +99,7 @@ header {
   margin: 30px auto;
   border-radius: 50%;
 
-  background-image: url("/assets/logo.jpg");
+  background-image: url("assets/logo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
